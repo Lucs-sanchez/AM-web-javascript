@@ -22,19 +22,19 @@ function pagarCuotas1() {
     switch (cuotas) {
       case 1:
         resultado = precio1 / 3;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 2:
         resultado = precio1 / 6;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 3:
         resultado = precio1 / 9;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 4:
         resultado = precio1 / 12;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       default:
         alert("Opcion incorrecta");
@@ -58,19 +58,19 @@ function pagarCuotas2() {
     switch (cuotas) {
       case 1:
         resultado = precio3 / 3;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 2:
         resultado = precio3 / 6;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 3:
         resultado = precio3 / 9;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 4:
         resultado = precio3 / 12;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       default:
         alert("Opcion incorrecta");
@@ -94,19 +94,19 @@ function pagarCuotas3() {
     switch (cuotas) {
       case 1:
         resultado = precio4 / 3;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 2:
         resultado = precio4 / 6;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 3:
         resultado = precio4 / 9;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       case 4:
         resultado = precio4 / 12;
-        alert(`Deberas abonar ${resultado} por mes`);
+        alert(`Deberas abonar ${resultado} ARS por mes`);
         break;
       default:
         alert("Opcion incorrecta");
