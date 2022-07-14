@@ -1,154 +1,72 @@
-// SIMULADOR INTERACTIVO
+// PRIMERA ENTREGA TRABAJO FINAL
 
-// VARIABLES GLOBALES
-let precio1 = 6000;
-let precio2 = 6000;
-let precio3 = 4500;
-let precio4 = 7000;
-let opcion;
-let cuotas;
-
-// FUNCIONES
-function pagarCuotas1() {
-  let validacion = prompt(
-    "quieres pagar con tarjeta? escribe si o no para volver"
-  );
-  if (validacion == "si") {
-    cuotas = Number(
-      prompt(
-        "Elige el numero de cuotas a pagar: \n\n-1: 3 cuotas \n-2: 6 cuotas \n-3: 9 cuotas \n-4: 12 cuotas"
-      )
-    );
-    switch (cuotas) {
-      case 1:
-        resultado = precio1 / 3;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 2:
-        resultado = precio1 / 6;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 3:
-        resultado = precio1 / 9;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 4:
-        resultado = precio1 / 12;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      default:
-        alert("Opcion incorrecta");
-        break;
-    }
-  } else {
-    stop;
-  }
+function comprar(nombre, email, carrito) {
+  let cant = carrito.reduce((acc, item) => item.precio + acc, 0);
+  alert(`Felicidades ${nombre} \nEl total de tu compra es: \n $ ${cant} ARS`);
 }
 
-function pagarCuotas2() {
-  let validacion = prompt(
-    "quieres pagar con tarjeta? escribe si o no para volver"
-  );
-  if (validacion == "si") {
-    cuotas = Number(
-      prompt(
-        "Elige el numero de cuotas a pagar: \n\n-1: 3 cuotas \n-2: 6 cuotas \n-3: 9 cuotas \n-4: 12 cuotas"
-      )
-    );
-    switch (cuotas) {
-      case 1:
-        resultado = precio3 / 3;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 2:
-        resultado = precio3 / 6;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 3:
-        resultado = precio3 / 9;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 4:
-        resultado = precio3 / 12;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      default:
-        alert("Opcion incorrecta");
-        break;
-    }
-  } else {
-    stop;
+class producto {
+  constructor(id, nombre, color, categoria, precio) {
+    this.id = id;
+    this.nombre = nombre;
+    this.color = color;
+    this.categoria = categoria;
+    this.precio = precio;
   }
 }
+let productos = [
+  new producto(10, "Classic logo", "Negro", "ropa", 4000),
+  new producto(11, "Oscilloscope logo", "Blanco", "ropa", 6500),
+  new producto(12, "Monkeys", "Negro", "ropa", 5000),
+  new producto(13, "Classic logo", "Blanco", "ropa", 6000),
+  new producto(20, "Double cd gatefold sleeve", "Marron", "discos", 3000),
+  new producto(21, "Vinil gategold sleeve + poster", "Marron", "discos", 7000),
+];
 
-function pagarCuotas3() {
-  let validacion = prompt(
-    "quieres pagar con tarjeta? escribe si o no para volver"
-  );
-  if (validacion == "si") {
-    cuotas = Number(
-      prompt(
-        "Elige el numero de cuotas a pagar: \n\n-1: 3 cuotas \n-2: 6 cuotas \n-3: 9 cuotas \n-4: 12 cuotas"
-      )
-    );
-    switch (cuotas) {
-      case 1:
-        resultado = precio4 / 3;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 2:
-        resultado = precio4 / 6;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 3:
-        resultado = precio4 / 9;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      case 4:
-        resultado = precio4 / 12;
-        alert(`Deberas abonar ${resultado} ARS por mes`);
-        break;
-      default:
-        alert("Opcion incorrecta");
-        break;
-    }
-  } else {
-    stop;
-  }
-}
+let categorias = [" ropa", "discos"];
 
-// MENU
+let carrito = [];
+let categoria = "";
 
 alert("Hola! Bienvenido a la tienda de Arctic Monkeys");
 
-do {
-  opcion = Number(
-    prompt(
-      "Selecciona el producto: \n\n1 - Remera Classic logo Black\n2 - Remera oscilloscope logo blanco\n3 - Gorro Monkeys\n4 - Doble CD Vinilo y poster combo\n5 - Salir "
-    )
+while (categoria != "salir" && categoria != null) {
+  let arraycat = categorias.join("\n ");
+  categoria = prompt(
+    `Ingrese una categoria para comprar o ingrese "salir":\n\n${arraycat} `
   );
-  switch (opcion) {
-    case 1:
-      alert(`El precio de este producto es de ${precio1} ARS`);
-      pagarCuotas1();
-      break;
-    case 2:
-      alert(`El precio de este producto es de ${precio2} ARS`);
-      pagarCuotas1();
-      break;
-    case 3:
-      alert(`El precio de este producto es de ${precio3} ARS`);
-      pagarCuotas2();
-      break;
-    case 4:
-      alert(`El precio de este producto es de ${precio4} ARS`);
-      pagarCuotas3();
-      break;
-    case 5:
-      alert("Hasta luego!");
-      break;
-    default:
-      alert("Opcion incorrecta");
-      break;
+
+  if (categoria != "salir" && categoria != null) {
+    let filtroCategoria = productos.filter(
+      (item) => item.categoria == categoria
+    );
+    console.log(filtroCategoria);
+
+    let cartel = "";
+    for (let i = 0; i < filtroCategoria.length; i++) {
+      cartel += ` id: ${filtroCategoria[i].id} \n
+        nombre: ${filtroCategoria[i].nombre}
+        precio: ${filtroCategoria[i].precio}
+        \n`;
+    }
+    let idSeleccionado = parseInt(
+      prompt(
+        `"Seleccione el ID del producto que quiere comprar: \n\n ${cartel}`
+      )
+    );
+    let productoParaCarro = filtroCategoria.find(
+      (item) => item.id == idSeleccionado
+    );
+    if (productoParaCarro) {
+      carrito.push(productoParaCarro);
+      console.log(carrito);
+    }
   }
-} while (opcion !== 5);
+}
+
+if (carrito.length > 0) {
+  alert("Ingrese sus datos para terminar la compra");
+  let nombre = prompt("Ingrese su nombre");
+  let email = prompt("Ingrese su email");
+  comprar(nombre, email, carrito);
+}
