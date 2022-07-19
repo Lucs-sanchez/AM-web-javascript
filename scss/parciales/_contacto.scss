@@ -1,0 +1,51 @@
+@mixin estilos-variados($background, $sombras, $filtro, $filtro2, $borde) {
+  background: $background;
+  box-shadow: $sombras;
+  backdrop-filter: $filtro;
+  -webkit-backdrop-filter: $filtro2;
+  border: $borde;
+}
+
+.form1 {
+  @include estilos-variados(
+    rgba(68, 60, 60, 0.4),
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    blur(4.5px),
+    blur(4.5px),
+    1px solid rgba(255, 255, 255, 0.18)
+  );
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #ffffff;
+  height: 600px;
+
+  &__contacto {
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-weight: 800;
+  }
+
+  &__pais {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 98%;
+  }
+
+  &__contacto1 {
+    margin-left: 2rem;
+  }
+
+  &__genero {
+    margin-left: 2rem;
+  }
+
+  &__comentario {
+    color: #364551;
+  }
+
+  &__boton {
+    margin-top: 1rem;
+    width: 98%;
+  }
+}
