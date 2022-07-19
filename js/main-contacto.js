@@ -8,6 +8,17 @@ let inputCorreo;
 let inputPais;
 let inputComentario;
 
+class UsuarioNuevo {
+  constructor(nombre, apellido, edad, correo, pais, comentario) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.correo = correo;
+    this.pais = pais;
+    this.comentario = comentario;
+  }
+}
+
 function inicializarElementos() {
   formulario = document.getElementById("formulario");
   inputNombre = document.getElementById("inputNombre");
@@ -18,11 +29,17 @@ function inicializarElementos() {
   inputComentario = document.getElementById("inputComentario");
 }
 
+// function detenerformulario() {
+//   if (formularioUsuarios > 5) {
+//   }
+// }
+
 inicializarElementos();
 
 formulario.onsubmit = (event) => {
   event.preventDefault();
-  formularioUsuarios.push(
+
+  let usuarioNuevo = new UsuarioNuevo(
     inputNombre.value,
     inputApellido.value,
     inputEdad.value,
@@ -30,6 +47,10 @@ formulario.onsubmit = (event) => {
     inputPais.value,
     inputComentario.value
   );
+
+  formularioUsuarios.push(usuarioNuevo);
+
   formulario.reset();
+
   console.log(formularioUsuarios);
 };
