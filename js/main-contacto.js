@@ -29,11 +29,6 @@ function inicializarElementos() {
   inputComentario = document.getElementById("inputComentario");
 }
 
-// function detenerformulario() {
-//   if (formularioUsuarios > 5) {
-//   }
-// }
-
 inicializarElementos();
 
 formulario.onsubmit = (event) => {
