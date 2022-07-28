@@ -1,3 +1,5 @@
-DESAFIO INCORPORAR ELEMENTOS
+Segunda entrega trabajo final
 
-Al abrir en el navegador tiene que dirigirse hacia la pagina de contacto, ahí se encuentra el formulario y el array reflejado en la consola con los datos que ingrese
+Este trabajo se refleja en el archivo main.js. Es un carro de compra basico donde el usuario agrega productos y gracias al storage y json no pierde los datos.
+
+Falta agregar un proceso que acumule cuando se elige el mismo producto y un link de finalizar compra que aparezca solo cuando el usuario agregue productos. En este ultimo hay una función al final del archivo main.js pero no esta implementada todavia.
