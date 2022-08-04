@@ -70,7 +70,7 @@ function listaProductos() {
       <div class="capa">
           <p>${productos[i].nombre}</p>
           <p class="capa_precio">$ ${productos[i].precio}</p>
-          <a onclick="meterAlCarrito({nombre: '${productos[i].nombre}', precio: '${productos[i].precio}'})" class="css-button-sliding-to-bottom--black">Agregar al carro</a>
+          <a onclick="meterAlCarrito({nombre: '${productos[i].nombre}', precio: '${productos[i].precio}'}), notificacionAgregar()" class="css-button-sliding-to-bottom--black">Agregar al carro</a>
           </div>
       </div>
   </div>`;
@@ -92,7 +92,7 @@ function productosCarrito() {
             <p>$ ${productosEncarro[i].precio} ARS</p>
             </div>
             <div class="tacho__producto">
-            <a onclick="eliminarDelCarro(${i})" ><i class="fa-solid fa-trash-can"></i></a>
+            <a onclick="eliminarDelCarro(${i}), notificacionEliminar()" ><i class="fa-solid fa-trash-can"></i></a>
             </div>
         </div>`;
   }
@@ -107,4 +107,20 @@ function finalCompra() {
  </div>`;
 
   compraProductos.innerHTML = finalizarCompra;
+}
+
+function notificacionAgregar() {
+  Toastify({
+    text: "Producto agregado al carrito!",
+    duration: 3000,
+    className: "notificacion__toast",
+  }).showToast();
+}
+
+function notificacionEliminar() {
+  Toastify({
+    text: "Producto eliminado!",
+    duration: 3000,
+    className: "notificacion__toast",
+  }).showToast();
 }

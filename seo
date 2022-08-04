@@ -1,5 +1,9 @@
-Segunda entrega trabajo final
+ENTREGA LIBRERIAS
 
-Este trabajo se refleja en el archivo main.js. Es un carro de compra basico donde el usuario agrega productos y gracias al storage y json no pierde los datos.
+Para esta entrega use 2 librerias vistas en clase: SweetAlert y Toastify.
 
-Falta agregar un proceso que acumule cuando se elige el mismo producto y un link de finalizar compra que aparezca solo cuando el usuario agregue productos. En este ultimo hay una función al final del archivo main.js pero no esta implementada todavia.
+Estan aplicadas en el index (Toastify) y Contacto (SweetAlert)
+
+Basicamente con Toastify cada vez que el usuario seleccione un producto saldra un cartel diciendo "Producto agregado al carrito" como tambien cuando elimine un producto.
+
+Con SweetAlert se le avisa al usuario cuando mande sus datos y comentario o en caso contrario si le falta algun dato por rellenar tambien se lo notificara con esta libreria.
