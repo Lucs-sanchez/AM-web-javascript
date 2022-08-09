@@ -64,7 +64,8 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav__carro nav__link css-button-sliding-to-bottom--black nav-link"
-                        href="./pages/carrito.html" target="_blank"> <i class="fa-solid fa-cart-shopping"></i></a>
+                        href="./pages/carrito.html" target="_blank"><i id="contador__carrito"
+                            class="fa-solid fa-cart-shopping"> 0</i></a>
                 </li>
             </ul>
         </nav>
@@ -140,9 +141,11 @@
 
         <div id="div-carrito" class="container__carrito">
         </div>
-        <div id="finalizarCompra">
-
+        <div>
+            <p class="total__producto">Precio Total: $<span id="p-total">0</span>
+            </p>
         </div>
+
     </main>
     <footer class="Articulo__footer">
         <div>

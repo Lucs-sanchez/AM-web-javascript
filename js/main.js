@@ -1,40 +1,11 @@
-let productos = [
-  {
-    nombre: `CLASSIC LOGO BLACK T-SHIRT`,
-    precio: 8250,
-    img: "./imagenes/foto1.png",
-  },
-  {
-    nombre: `CLASSIC LOGO WHITE T-SHIRT`,
-    precio: 8250,
-    img: "./imagenes/foto2.webp",
-  },
-  {
-    nombre: `OSCILLOSCOPE LOGO BLACK UNISEX T-SHIRT`,
-    precio: 8250,
-    img: "./imagenes/foto3.png",
-  },
-  {
-    nombre: `OSCILLOSCOPE LOGO WHITE UNISEX T-SHIRT`,
-    precio: 8250,
-    img: "./imagenes/foto4.png",
-  },
-  { nombre: `MONKEYS T-SHIRT`, precio: 8250, img: "./imagenes/foto5.png" },
-  {
-    nombre: `HEAVYWEIGHT CLEAR VINYL20 TRACKS GATEFOLD SLEEVE EXCLUSIVE A2 POSTER`,
-    precio: 9900,
-    img: "./imagenes/foto6.png",
-  },
-  {
-    nombre: `DOUBLE CD 20 TRACKS GATEFOLD SLEEVE`,
-    precio: 3960,
-    img: "./imagenes/foto7.png",
-  },
-  { nombre: `MONKEYS BEANIE HAT`, precio: 6650, img: "./imagenes/foto8.png" },
-];
+// VARIABLES GENERALES
 
 let informacionDeUsuario = localStorage.getItem("productosEncarro");
 let productosEncarro;
+
+let contadorCarrito = document.getElementById("contador__carrito");
+
+// CONDICIONAL GUARDAR INFORMACION DE USUARIO
 
 if (!informacionDeUsuario) {
   productosEncarro = [];
@@ -44,27 +15,18 @@ if (!informacionDeUsuario) {
   productosCarrito();
 }
 
-// Funciones
-
-function meterAlCarrito(objproducto) {
-  productosEncarro.push(objproducto);
-  localStorage.setItem("productosEncarro", JSON.stringify(productosEncarro));
-  productosCarrito();
-  console.log(productosEncarro);
-}
-
-function eliminarDelCarro(nombre) {
-  productosEncarro.splice(nombre, 1);
-  localStorage.setItem("productosEncarro", JSON.stringify(productosEncarro));
-  productosCarrito();
-}
+// FUNCIONES PRINCIPALES ECOMMERCE
 
 function listaProductos() {
-  let aux = "";
-  for (let i = 0; i < productos.length; i++) {
-    aux =
-      aux +
-      ` <div class="container__imagen grid text-center">
+  fetch("/data.json")
+    .then((resinicial) => resinicial.json())
+    .then((data) => {
+      let productos = data;
+      let aux = "";
+      for (let i = 0; i < productos.length; i++) {
+        aux =
+          aux +
+          ` <div class="container__imagen grid text-center">
       <div class="container__imagen col">
           <img src=${productos[i].img} class="img-fluid">
       <div class="capa">
@@ -74,10 +36,13 @@ function listaProductos() {
           </div>
       </div>
   </div>`;
-  }
-  document.getElementById("div-productos").innerHTML = aux;
+      }
+      document.getElementById("div-productos").innerHTML = aux;
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 }
-listaProductos();
 
 function productosCarrito() {
   let aux = "";
@@ -99,15 +64,26 @@ function productosCarrito() {
   document.getElementById("div-carrito").innerHTML = aux;
 }
 
-function finalCompra() {
-  let compraProductos = document.getElementById("finalizarCompra");
+// FUNCIONES AGREGAR/SACAR DEL CARRO
 
-  finalizarCompra = `<div>
-  <a class="css-button-sliding-to-bottom--black">Finalizar compra</a>
- </div>`;
-
-  compraProductos.innerHTML = finalizarCompra;
+function meterAlCarrito(objproducto) {
+  productosEncarro.push(objproducto);
+  localStorage.setItem("productosEncarro", JSON.stringify(productosEncarro));
+  productosCarrito();
+  totalCompra();
+  contadorCarrito.innerText = productosEncarro.length;
+  console.log(productosEncarro);
 }
+
+function eliminarDelCarro(nombre) {
+  productosEncarro.splice(nombre, 1);
+  localStorage.setItem("productosEncarro", JSON.stringify(productosEncarro));
+  productosCarrito();
+  totalCompra();
+  contadorCarrito.innerText = productosEncarro.length;
+}
+
+// FUNCIONES DE NOTIFICACIONES
 
 function notificacionAgregar() {
   Toastify({
@@ -124,3 +100,18 @@ function notificacionEliminar() {
     className: "notificacion__toast",
   }).showToast();
 }
+
+// FUNCION TOTAL PRODUCTOS
+
+function totalCompra() {
+  let precioTotal = document.getElementById("p-total");
+  precioTotal.innerText = productosEncarro.reduce(
+    (acc, item) => acc + item.precio,
+    0
+  );
+  console.log(precioTotal);
+}
+
+// LOGICA ECOMMERCE
+
+listaProductos();

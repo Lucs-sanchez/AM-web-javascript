@@ -16,12 +16,10 @@ body {
 header {
   background-color: black;
 }
-
 header .Header__titulo {
   text-align: center;
   text-decoration: none;
 }
-
 header h1 {
   background-color: black;
   font-size: 50px;
@@ -54,14 +52,14 @@ header h1 {
   outline: none;
   border-radius: 5px;
   z-index: 0;
-  background: black;
+  background: rgb(0, 0, 0);
   overflow: hidden;
   border: 1px solid #ffffff;
   color: #ffffff;
 }
 
 .css-button-sliding-to-bottom--black:hover {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .css-button-sliding-to-bottom--black:hover:after {
@@ -114,31 +112,25 @@ header h1 {
   color: #ffffff;
   height: 600px;
 }
-
 .form1__contacto {
   justify-content: center;
   margin-bottom: 2rem;
   font-weight: 800;
 }
-
 .form1__pais {
   margin-left: 10px;
   margin-bottom: 10px;
   width: 98%;
 }
-
 .form1__contacto1 {
   margin-left: 2rem;
 }
-
 .form1__genero {
   margin-left: 2rem;
 }
-
 .form1__comentario {
   color: #364551;
 }
-
 .form1__boton {
   margin-top: 1rem;
   width: 98%;
@@ -155,14 +147,12 @@ header h1 {
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #ffffff;
 }
-
 .Album__imagen1, .Album__video1 {
   margin-top: 1rem;
   background: rgba(115, 115, 115, 0.6);
   border-radius: 2rem;
   border: 10px solid rgba(255, 255, 255, 0.18);
 }
-
 .Album__parrafo1 {
   margin: 2rem;
   font-size: 1.2rem;
@@ -193,13 +183,13 @@ body {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 800;
-  color: black;
+  color: rgb(0, 0, 0);
   opacity: 0;
 }
 
 p {
   margin-top: 35%;
-  opacity: calc(1);
+  opacity: 1;
 }
 
 .capa_precio {
@@ -208,17 +198,17 @@ p {
 
 a {
   text-decoration: none;
-  opacity: calc(1);
+  opacity: 1;
 }
 
 .container__imagen:hover {
   transform: scale(1.02);
-  opacity: calc(1);
+  opacity: 1;
   transition: all 0.5s;
 }
 
 .capa:hover {
-  opacity: calc(0.8);
+  opacity: 0.8;
 }
 
 .titulo__carro {
@@ -251,7 +241,7 @@ a {
   margin: -1rem;
   font-size: 1.3rem;
   font-weight: 600;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .precio__producto p {
@@ -260,7 +250,7 @@ a {
   margin-left: 80%;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #fffdfd;
+  color: rgb(255, 253, 253);
 }
 
 .tacho__producto {
@@ -272,7 +262,7 @@ a {
 
 .fa-solid,
 .fas {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .live__tabla {
@@ -287,17 +277,14 @@ a {
   border-radius: 10px;
   color: #ffffff;
 }
-
 .live__titulo, .live__live {
   width: auto;
   margin: 1rem;
   font-weight: 800;
 }
-
 .live__tabla tr {
   color: #ffffff;
 }
-
 .live__tabla a {
   text-decoration: underline;
   color: #ffffff;
@@ -328,6 +315,18 @@ a {
   background-color: aqua;
 }
 
+.total__producto {
+  text-align: center;
+  width: 25%;
+  margin: 1rem 4rem;
+  padding: 0.7rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1024px) {
   .capa {
     position: absolute;
@@ -339,12 +338,12 @@ a {
     text-align: center;
     font-size: 1rem;
     font-weight: 800;
-    color: black;
+    color: rgb(0, 0, 0);
     opacity: 0;
   }
   p {
     margin: 2rem 0;
-    opacity: calc(1);
+    opacity: 1;
   }
   .capa__vinilo {
     margin: 10px 0;
@@ -356,7 +355,6 @@ a {
     font-weight: 700;
   }
 }
-
 @media screen and (max-width: 768px) {
   .capa {
     position: absolute;
@@ -368,12 +366,12 @@ a {
     text-align: center;
     font-size: 15px;
     font-weight: 800;
-    color: black;
+    color: rgb(0, 0, 0);
     opacity: 0;
   }
   p {
     margin-top: 1rem;
-    opacity: calc(1);
+    opacity: 1;
   }
   .capa__vinilo {
     font-size: 15px;
@@ -385,7 +383,6 @@ a {
     font-weight: 700;
   }
 }
-
 @media screen and (max-width: 637px) {
   header h1 {
     font-size: 40px;
@@ -475,7 +472,6 @@ a {
     width: 80%;
   }
 }
-
 @media screen and (max-width: 594px) {
   /* Contacto */
   .form1__genero {
@@ -487,7 +483,6 @@ a {
     width: 93%;
   }
 }
-
 @media screen and (max-width: 425px) {
   .nav__desktop {
     display: none;
@@ -524,12 +519,12 @@ a {
     text-align: center;
     font-size: 15px;
     font-weight: 800;
-    color: black;
+    color: rgb(0, 0, 0);
     opacity: 0;
   }
   p {
     margin-top: 30%;
-    opacity: calc(1);
+    opacity: 1;
   }
   .capa__vinilo {
     font-size: 15px;
@@ -549,7 +544,6 @@ a {
     align-items: center;
   }
 }
-
 @media screen and (max-width: 375px) {
   .merch__table {
     width: 310px;
@@ -557,12 +551,10 @@ a {
     font-weight: 700;
   }
 }
-
 @media screen and (max-width: 320px) {
   .merch__table {
     width: 265px;
     text-align: center;
     font-weight: 700;
   }
-}
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */

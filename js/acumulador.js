@@ -1,0 +1,3 @@
+function acumuladorProducto() {
+  let acumulador = "";
+}

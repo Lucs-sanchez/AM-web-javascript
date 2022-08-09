@@ -22,3 +22,15 @@
 .notificacion__correo {
   background-color: aqua;
 }
+
+.total__producto {
+  text-align: center;
+  width: 25%;
+  margin: 1rem 4rem;
+  padding: 0.7rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
