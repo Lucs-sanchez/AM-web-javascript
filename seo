@@ -2,6 +2,8 @@ ENTREGA INCORPORAR FETCH AL PROYECTO
 
 La incorporacion de fetch se puede ver en la funcion listaProductos() donde se llama a data.json con el array de productos.
 
-Luego en otros aspectos del proyecto se agrego un contador de productos que se ve visible en el emoticono de carro al lado de los iconos de redes sociales.
+Luego en otros aspectos del proyecto se agrego un contador de productos que se ve visible en el emoticono de carro al lado de los iconos de redes sociales (Falta mejorar el aspecto).
 
-Falta agregar la suma del total de productos que ando con un problema y agregar la suma de un mismo producto para que no se repita al volverlo a elegir.
+Falta agregar la suma del total de productos que ando con un problema que no llega hacerse la operacion de suma sino que agrega un precio detras de otro.
+
+Por ultimo falta agregar la suma de un mismo producto para que no se repita al volverlo a elegir.
