@@ -1,9 +1,9 @@
-ENTREGA INCORPORAR FETCH AL PROYECTO
+ENTREGA FINAL
 
-La incorporacion de fetch se puede ver en la funcion listaProductos() donde se llama a data.json con el array de productos.
+Esta pagina es una emulacion a la pagina oficial https://arcticmonkeys.com (actualmente renovaron y cambiaron de estilo la web) donde se trato de abarcar un pequeño ecommerce y un espacio de contacto para enviar comentarios.
 
-Luego en otros aspectos del proyecto se agrego un contador de productos que se ve visible en el emoticono de carro al lado de los iconos de redes sociales (Falta mejorar el aspecto).
+En la pagina de contactos se pide al usuario dejar sus datos y un comentario el cual se guarda como array de informacion. Esta no se envia ni se guarda, solamente queda guardada en la consola. Si bien no va a ningun lado la idea es que si se puede enviar o guardar, quedaria a disposicion del destinatario, en este caso al propietario de la pagina. El codigo de js se encuentra en "main-carrito.js".
 
-Falta agregar la suma del total de productos que ando con un problema que no llega hacerse la operacion de suma sino que agrega un precio detras de otro.
+En cuanto a la pagina principal hay una tienda la cual se pueden agregar/sumar productos donde se almacenan en la pagina de carrito y al llegar deja interactuar para borrar un producto o directamente comprarlo. El codigo de js se encuentra en "main.js" y los datos de los productos se encuentra en "data.json".
 
-Por ultimo falta agregar la suma de un mismo producto para que no se repita al volverlo a elegir.
+En lo personal no estoy satisfecho por el resultado, siento que me enredé con el codigo pero trate de que cumpliera con todo lo pedido en la consigna. Es seguro que siga trabajando para mejorarlo y poder incluirlo en un portfolio. De nuevo, espero que cumpla con lo pedido y muchisimas gracias por la gran cursada, un saludo!

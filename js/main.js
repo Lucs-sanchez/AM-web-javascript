@@ -76,7 +76,6 @@ function meterAlCarrito(nuevoProducto) {
       productosEncarro[i].cantidad++;
       return null;
     }
-    console.log(productosEncarro[i].cantidad);
   }
 
   productosEncarro.push(nuevoProducto);
@@ -161,25 +160,3 @@ function carroVacio() {
 listaProductos();
 
 carroVacio();
-
-function productoRepetido() {}
-
-// for (let i = 0; i < productosEncarro.length; i++) {
-//   if (productosEncarro[i].nombre.trim() === nuevoProducto.nombre.trim()) {
-//     productosEncarro[i].cantidad++;
-//     return;
-//   }
-//   console.log(productosEncarro[i].cantidad);
-// }
-
-// let existe = productosEncarro.some(
-//   (nuevoProducto) => productos.id === nuevoProducto
-// );
-
-// if (existe) {
-//   let productosEncarro = productosEncarro.map((prod) => {
-//     if (productos.id === productosEncarro.id) {
-//       productos.cantidad++;
-//     }
-//   });
-// }
