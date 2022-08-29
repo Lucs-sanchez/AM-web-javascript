@@ -53,7 +53,6 @@ a {
 
 .titulo__carro {
   text-align: center;
-  width: 25%;
   margin: 1rem 4rem;
   padding: 0.7rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -66,7 +65,7 @@ a {
 .container__productoscarro {
   position: relative;
   margin: 0 4rem;
-  padding: 2rem;
+  padding: 10px;
   background-color: #364551;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -76,27 +75,28 @@ a {
   height: 100%;
 }
 
-.nombre__producto p {
-  position: absolute;
-  margin: -1rem;
-  font-size: 1.3rem;
+.nombre__producto {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
   font-weight: 600;
   color: rgb(255, 255, 255);
 }
 
-.precio__producto p {
-  position: absolute;
-  margin-top: -1rem;
-  margin-left: 80%;
+.precio__producto {
+  margin: 0;
+  text-align: center;
+  padding: 0;
   font-size: 1.4rem;
   font-weight: 600;
   color: rgb(255, 253, 253);
 }
 
 .tacho__producto {
-  position: absolute;
-  margin: -1.1rem 90%;
-  font-size: 1.3rem;
+  margin: 0;
+  margin-left: 80%;
+  padding: 0;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -106,10 +106,9 @@ a {
 }
 
 .nombre__cantidad {
-  position: absolute;
-  margin-top: -3rem;
-  margin-left: 68%;
-  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
   font-weight: 600;
   color: rgb(255, 253, 253);
 }

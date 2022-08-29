@@ -263,6 +263,34 @@
     font-weight: 700;
     align-items: center;
   }
+
+  .container__productoscarro {
+    position: relative;
+    margin: 0 2rem;
+    padding: 10px;
+    background-color: #364551;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    width: 90%;
+    height: 100%;
+  }
+
+  .total__producto {
+    cursor: context-menu;
+    text-align: center;
+    margin: 1rem 4rem;
+    padding-bottom: 4rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+  }
 }
 
 @media screen and (max-width: 375px) {

@@ -51,18 +51,18 @@ function productosCarrito() {
   for (let i = 0; i < productosEncarro.length; i++) {
     aux =
       aux +
-      ` <div class="container__productoscarro">
-            <div class="nombre__producto">
-            <p>${productosEncarro[i].nombre}</p>
+      ` <div class="container__productoscarro row justify-content-md-center ">
+            <div class="col-md-3">
+            <p class="nombre__producto">${productosEncarro[i].nombre}</p>
             </div>
-            <div class="nombre__cantidad">
-            <p>Cantidad : ${productosEncarro[i].cantidad}</p>
+            <div class="col-md-3">
+            <p class="nombre__cantidad">Cantidad : ${productosEncarro[i].cantidad}</p>
             </div>
-            <div class="precio__producto">
-            <p>$ ${productosEncarro[i].precio} ARS</p>
+            <div class="col-md-3">
+            <p class="precio__producto">$ ${productosEncarro[i].precio} ARS</p>
             </div>
-            <div class="tacho__producto">
-            <a onclick="eliminarDelCarro(${i}), notificacionEliminar()"><i class="fa-solid fa-trash-can"></i></a>
+            <div class="col-md-3">
+            <a onclick="eliminarDelCarro(${i}), notificacionEliminar()"><i class="tacho__producto fa-solid fa-trash-can"></i></a>
             </div>
         </div>`;
   }
@@ -98,7 +98,7 @@ function eliminarDelCarro(nombre) {
 
 function notificacionAgregar() {
   Toastify({
-    Text: "Producto agregado al carrito!",
+    text: "Producto agregado al carrito!",
     duration: 3000,
     className: "notificacion__toast",
   }).showToast();
@@ -107,7 +107,7 @@ function notificacionAgregar() {
 function notificacionEliminar() {
   Swal.fire({
     html: '<i class="noti__mail fa-solid fa-circle-check"></i>',
-    Text: "Producto eliminado",
+    title: "Producto eliminado",
     background: "#364551",
     color: "#FFFFFF",
   });
@@ -115,14 +115,16 @@ function notificacionEliminar() {
 
 function notificacionCompra() {
   Swal.fire({
-    Text: "Felicitaciones, has realizado tu compra",
-    html: '<i class="noti__mail fa-solid fa-cart-circle-check"></i>',
+    title: "Felicitaciones! <br> Has realizado tu compra",
+    html: '<img src="../imagenes/carrito-check.jpg" class="carrito__check">',
     showClass: {
       popup: "animate__animated animate__backInDown",
     },
     hideClass: {
       popup: "animate__animated animate__backOutDown",
     },
+    background: "#F5F5F5",
+    color: "#212529",
   });
 }
 
@@ -159,3 +161,25 @@ function carroVacio() {
 listaProductos();
 
 carroVacio();
+
+function productoRepetido() {}
+
+// for (let i = 0; i < productosEncarro.length; i++) {
+//   if (productosEncarro[i].nombre.trim() === nuevoProducto.nombre.trim()) {
+//     productosEncarro[i].cantidad++;
+//     return;
+//   }
+//   console.log(productosEncarro[i].cantidad);
+// }
+
+// let existe = productosEncarro.some(
+//   (nuevoProducto) => productos.id === nuevoProducto
+// );
+
+// if (existe) {
+//   let productosEncarro = productosEncarro.map((prod) => {
+//     if (productos.id === productosEncarro.id) {
+//       productos.cantidad++;
+//     }
+//   });
+// }
