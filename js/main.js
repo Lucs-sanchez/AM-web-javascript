@@ -56,13 +56,7 @@ function productosCarrito() {
             <p>${productosEncarro[i].nombre}</p>
             </div>
             <div class="nombre__cantidad">
-            <button class="boton__mas btn  btn-sm">
-            +
-            </button>
             <p>Cantidad : ${productosEncarro[i].cantidad}</p>
-            <button class="boton__menos btn btn-sm">
-            -
-            </button>
             </div>
             <div class="precio__producto">
             <p>$ ${productosEncarro[i].precio} ARS</p>
@@ -118,6 +112,19 @@ function notificacionEliminar() {
   });
 }
 
+function notificacionCompra() {
+  Swal.fire({
+    title: "Felicitaciones, has realizado tu compra",
+    html: '<i class="noti__mail fa-solid fa-cart-circle-check"></i>',
+    showClass: {
+      popup: "animate__animated animate__backInDown",
+    },
+    hideClass: {
+      popup: "animate__animated animate__backOutDown",
+    },
+  });
+}
+
 // FUNCION TOTAL PRODUCTOS
 
 function totalCompra() {
@@ -128,21 +135,26 @@ function totalCompra() {
   );
 }
 
-// FUNCION CANTIDAD PRODUCTOS
+// FUNCION SI HAY PRODUCTOS EN EL CARRO
 
+function carroVacio() {
+  if (productosEncarro.length === 0) {
+    let aux = "";
+    aux =
+      aux +
+      `<h3>NO HAY PRODUCTOS EN EL CARRO</h3>
+      <a href="../index.html" class="seguir__comprando css-button-sliding-to-bottom--black">SEGUIR COMPRANDO</a>`;
+    document.getElementById("carritoVacio").innerHTML = aux;
+  } else {
+    let aux = "";
+    aux =
+      aux +
+      ` <a onclick="notificacionCompra()" class="finalizar__compra css-button-sliding-to-bottom--black">COMPRAR</a>`;
+    document.getElementById("finalizarCompra").innerHTML = aux;
+  }
+}
 // LOGICA ECOMMERCE
 
 listaProductos();
 
 carroVacio();
-
-function carroVacio() {
-  if (productosEncarro.length === 0) {
-    Swal.fire({
-      html: '<img class="noti__mail" src="../imagenes/carro-vacio.png">',
-      title: "Carrito vacio! <br> Vuelve para agregar productos",
-      background: "#364551",
-      color: "#FFFFFF",
-    });
-  }
-}
