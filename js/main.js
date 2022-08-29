@@ -20,7 +20,7 @@ if (!informacionDeUsuario) {
 // FUNCIONES PRINCIPALES ECOMMERCE
 
 function listaProductos() {
-  fetch("http://jsonblob.com/1013619063716593664")
+  fetch("data.json")
     .then((resinicial) => resinicial.json())
     .then((data) => {
       let productos = data;
@@ -74,7 +74,6 @@ function productosCarrito() {
   }
   document.getElementById("div-carrito").innerHTML = aux;
 }
-
 // FUNCIONES AGREGAR/SACAR DEL CARRO
 
 function meterAlCarrito(nuevoProducto) {
