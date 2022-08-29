@@ -2,41 +2,57 @@
   {
     "nombre": "CLASSIC LOGO BLACK T-SHIRT",
     "precio": 8250,
-    "img": "./imagenes/foto1.png"
+    "img": "imagenes/foto1.png",
+    "cantidad": 1,
+    "id": 100
   },
   {
     "nombre": "CLASSIC LOGO WHITE T-SHIRT",
     "precio": 8250,
-    "img": "./imagenes/foto2.webp"
+    "img": "imagenes/foto2.webp",
+    "cantidad": 1,
+    "id": 101
   },
   {
     "nombre": "OSCILLOSCOPE LOGO BLACK UNISEX T-SHIRT",
     "precio": 8250,
-    "img": "./imagenes/foto3.png"
+    "img": "imagenes/foto3.png",
+    "cantidad": 1,
+    "id": 102
   },
   {
     "nombre": "OSCILLOSCOPE LOGO WHITE UNISEX T-SHIRT",
     "precio": 8250,
-    "img": "./imagenes/foto4.png"
+    "img": "imagenes/foto4.png",
+    "cantidad": 1,
+    "id": 103
   },
   {
     "nombre": "MONKEYS T-SHIRT",
     "precio": 8250,
-    "img": "./imagenes/foto5.png"
+    "img": "imagenes/foto5.png",
+    "cantidad": 1,
+    "id": 104
   },
   {
     "nombre": "HEAVYWEIGHT CLEAR VINYL20 TRACKS GATEFOLD SLEEVE EXCLUSIVE A2 POSTER",
     "precio": 9900,
-    "img": "./imagenes/foto6.png"
+    "img": "imagenes/foto6.png",
+    "cantidad": 1,
+    "id": 105
   },
   {
     "nombre": "DOUBLE CD 20 TRACKS GATEFOLD SLEEVE",
     "precio": 3960,
-    "img": "./imagenes/foto7.png"
+    "img": "imagenes/foto7.png",
+    "cantidad": 1,
+    "id": 106
   },
   {
     "nombre": "MONKEYS BEANIE HAT",
     "precio": 6650,
-    "img": "./imagenes/foto8.png"
+    "img": "imagenes/foto8.png",
+    "cantidad": 1,
+    "id": 107
   }
 ]

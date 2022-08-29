@@ -14,13 +14,25 @@
   color: #212529;
 }
 
-.noti__mail {
-  color: #f8f8f8;
-  font-size: 7rem;
+.notificacion__borrar {
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  outline: none;
+  border: 2px solid #212529;
+  background: #212529;
+  font-size: 1.1rem;
 }
 
-.notificacion__correo {
-  background-color: aqua;
+.notificacion__borrar:hover {
+  background: #fff;
+  color: #212529;
+}
+
+.noti__mail {
+  font-size: 7rem;
+  width: 40%;
 }
 
 .total__producto {
@@ -33,4 +45,18 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 1000;
+}
+
+#p-total {
+  letter-spacing: 1px;
+}
+
+.esconder__carro {
+  display: none;
+}
+
+.swal2-confirm {
+  background-color: #212529 !important;
 }

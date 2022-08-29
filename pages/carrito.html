@@ -30,7 +30,7 @@
                         href="biografia.html">Biografia</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="css-button-sliding-to-bottom--black nav-link" href="live.html">Live</a>
+                    <a class="css-button-sliding-to-bottom--black nav-link" href="live.html">Conciertos</a>
                 </li>
                 <li class="nav-item">
                     <a class="css-button-sliding-to-bottom--black nav-link" href="discografia.html">Discografia</a>
@@ -62,8 +62,8 @@
                             class="fa-brands fa-instagram"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav__carro nav__link css-button-sliding-to-bottom--black nav-link" href="carrito.html"
-                        target="_blank"><i class="fa-solid fa-cart-shopping"> 0</i></a>
+                    <a class="nav__carro nav__link css-button-sliding-to-bottom--black nav-link" href="carrito.html"><i
+                            id="contador__carrito" class="fa-solid fa-cart-shopping"> 0</i></a>
                 </li>
             </ul>
         </nav>
@@ -130,15 +130,26 @@
         </nav>
     </header>
     <main>
-        <div id="div-carrito" class="container__carrito">
+        <h2 class="titulo__carro">Carro de compras</h2>
+
+        <div id="carroVacio">
+
         </div>
 
+        <div id="div-carrito" class="container__carrito">
+        </div>
+        <div>
+            <p class="total__producto">PRECIO TOTAL: $<span id="p-total">0</span>
+            </p>
+        </div>
     </main>
     <footer class="Articulo__footer">
         <div>
             <h3>© 2022 Arctic Monkeys | Privacy Policy</h3>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>

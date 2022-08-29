@@ -1,0 +1,1 @@
+contadorCarrito.innerText = productosEncarro.length;
