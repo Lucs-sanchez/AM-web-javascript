@@ -74,10 +74,11 @@ function meterAlCarrito(nuevoProducto) {
   for (let i = 0; i < productosEncarro.length; i++) {
     if (productosEncarro[i].nombre.trim() === nuevoProducto.nombre.trim()) {
       productosEncarro[i].cantidad++;
-      return;
+      return null;
     }
     console.log(productosEncarro[i].cantidad);
   }
+
   productosEncarro.push(nuevoProducto);
   productosCarrito();
   localStorage.setItem("productosEncarro", JSON.stringify(productosEncarro));
@@ -106,7 +107,7 @@ function notificacionAgregar() {
 function notificacionEliminar() {
   Swal.fire({
     html: '<i class="noti__mail fa-solid fa-circle-check"></i>',
-    title: "Producto eliminado",
+    nombre: "Producto eliminado",
     background: "#364551",
     color: "#FFFFFF",
   });
@@ -114,7 +115,7 @@ function notificacionEliminar() {
 
 function notificacionCompra() {
   Swal.fire({
-    title: "Felicitaciones, has realizado tu compra",
+    nombre: "Felicitaciones, has realizado tu compra",
     html: '<i class="noti__mail fa-solid fa-cart-circle-check"></i>',
     showClass: {
       popup: "animate__animated animate__backInDown",
@@ -158,3 +159,25 @@ function carroVacio() {
 listaProductos();
 
 carroVacio();
+
+function productoRepetido() {}
+
+// for (let i = 0; i < productosEncarro.length; i++) {
+//   if (productosEncarro[i].nombre.trim() === nuevoProducto.nombre.trim()) {
+//     productosEncarro[i].cantidad++;
+//     return;
+//   }
+//   console.log(productosEncarro[i].cantidad);
+// }
+
+// let existe = productosEncarro.some(
+//   (nuevoProducto) => productos.id === nuevoProducto
+// );
+
+// if (existe) {
+//   let productosEncarro = productosEncarro.map((prod) => {
+//     if (productos.id === productosEncarro.id) {
+//       productos.cantidad++;
+//     }
+//   });
+// }
