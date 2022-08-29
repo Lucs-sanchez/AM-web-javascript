@@ -20,7 +20,7 @@ if (!informacionDeUsuario) {
 // FUNCIONES PRINCIPALES ECOMMERCE
 
 function listaProductos() {
-  fetch("/data.json")
+  fetch("http://jsonblob.com/1013619063716593664")
     .then((resinicial) => resinicial.json())
     .then((data) => {
       let productos = data;
